@@ -14,12 +14,12 @@ class CreateSubtipoTable extends Migration
     public function up()
     {
          Schema::create('subtipo', function (Blueprint $table) {
-            $table->increments('nSTipCod');
-            $table->integer('nTipoCod');
+            $table->increments('nSTipCod')->unsigned();
+            $table->integer('nTipoCod')->unsigned();
             $table->string('cSTipDes');
             $table->integer('tSTipFcre');
             $table->integer('tSTipFmod');
-            $table->primary('nSTipCod');
+            
             $table->foreign('nTipoCod')->references('nTipoCod')->on('tipo');
             
         });

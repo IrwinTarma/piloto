@@ -14,7 +14,7 @@ class CreateProvedorTable extends Migration
     public function up()
     {
          Schema::create('provedor', function (Blueprint $table) {
-            $table->increments('nProvCod');
+            $table->increments('nProvCod')->unsigned();
             $table->integer('nProvRuc')->unique();
             $table->string('cProvNom');
             $table->string('cProvDir');
@@ -23,7 +23,7 @@ class CreateProvedorTable extends Migration
             $table->string('cProvEma');
             $table->string('cProvObs');
             $table->timestamps();
-            $table->primary('nProvCod');
+            
         });
     }
 
@@ -34,6 +34,6 @@ class CreateProvedorTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('proveedor');
+        Schema::dropIfExists('provedor');
     }
 }

@@ -14,9 +14,9 @@ class CreateProductoalmacenTable extends Migration
     public function up()
     {
          Schema::create('productoalmacen', function (Blueprint $table) {
-            $table->increments('nProAlmCod');
-            $table->string('cProdCod');
-            $table->integer('nAlmCod');
+            $table->increments('nProAlmCod')->unsigned();
+            $table->string('cProdCod',10);
+            $table->integer('nAlmCod')->unsigned();
             $table->integer('nProdMin');
             $table->integer('nProdMax');
             $table->integer('nProdStock');

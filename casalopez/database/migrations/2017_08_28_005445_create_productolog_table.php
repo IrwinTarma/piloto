@@ -14,9 +14,9 @@ class CreateProductologTable extends Migration
     public function up()
     {
          Schema::create('productolog', function (Blueprint $table) {
-            $table->string('cProdCod');
+            $table->string('cProdCod',10);
             $table->integer('nSTipCod');
-            $table->integer('nMedCod');
+            $table->double('nMedCod', 15, 8);
             $table->string('cProdDes');
             $table->integer('nProdPsigv');
             $table->integer('nProdPcigv');

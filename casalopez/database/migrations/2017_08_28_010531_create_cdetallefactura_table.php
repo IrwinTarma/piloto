@@ -14,16 +14,22 @@ class CreateCdetallefacturaTable extends Migration
     public function up()
     {
          Schema::create('cdetallefactura', function (Blueprint $table) {
-            $table->increments('nProAlmCod');
-            $table->string('cProdCod');
-            $table->integer('nAlmCod');
-            $table->integer('nProdMin');
-            $table->integer('nProdMax');
-            $table->integer('nProdStock');
+            $table->increments('nCDFacCod');
+            $table->string('cCFacCod',10);
+            $table->string('cProdCod',10);
+            $table->string('cCDFacCodArt');
+            $table->string('cCDFacCodInt');
+            $table->string('cCDFacDesc');
+            $table->integer('nCDFacCant');
+            $table->string('cCDFacPUni');
+            $table->string('cCDFacPVen');
+            $table->integer('nCDFacFecVen');
+            $table->string('cCDFacObs');
+            $table->string('cCDFacFIng');
             
-            //$table->primary('nProAlmCod');
+            //$table->primary('nCDFacCod');
+            $table->foreign('cCFacCod')->references('cCFacCod')->on('cfactura');
             $table->foreign('cProdCod')->references('cProdCod')->on('producto');
-            $table->foreign('nAlmCod')->references('nAlmCod')->on('almacen');
             
         });
     }
@@ -35,6 +41,6 @@ class CreateCdetallefacturaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vdetallefactura');
+        Schema::dropIfExists('cdetallefactura');
     }
 }

@@ -14,8 +14,8 @@ class CreateCfacturaTable extends Migration
     public function up()
     {
          Schema::create('cfactura', function (Blueprint $table) {
-            $table->string('ccfaccod');
-            $table->integer('nProvCod');
+            $table->string('ccfaccod',10);
+            $table->integer('nProvCod')->unsigned();
             $table->string('ccfacconven');
             $table->string('ccfacnped');
             $table->string('ccfacocom');

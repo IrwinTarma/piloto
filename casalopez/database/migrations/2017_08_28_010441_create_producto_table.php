@@ -14,9 +14,9 @@ class CreateProductoTable extends Migration
     public function up()
     {
          Schema::create('producto', function (Blueprint $table) {
-            $table->string('cProdCod');
-            $table->integer('nSTipCod');
-            $table->integer('nMedCod');
+            $table->string('cProdCod',10);
+            $table->integer('nSTipCod')->unsigned();
+            $table->integer('nMedCod')->unsigned();
             $table->string('cProdDes');
             $table->integer('nProdPsigv');
             $table->integer('nProdPcigv');

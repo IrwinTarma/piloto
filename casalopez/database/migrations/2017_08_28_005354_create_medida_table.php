@@ -14,10 +14,10 @@ class CreateMedidaTable extends Migration
     public function up()
     {
          Schema::create('medida', function (Blueprint $table) {
-            $table->increments('nmedcod');
+            $table->increments('nmedcod')->unsigned();
             $table->string('cmednom');
             $table->string('cmeddesc');                       
-            $table->primary('nmedcod');
+          
         });
     }
 

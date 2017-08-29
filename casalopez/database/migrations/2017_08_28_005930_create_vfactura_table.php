@@ -14,13 +14,13 @@ class CreateVfacturaTable extends Migration
     public function up()
     {
          Schema::create('vfactura', function (Blueprint $table) {
-            $table->string('cVFacCod');
-            $table->integer('nClieCod');
-            $table->integer('nVFacFemi');
-            $table->integer('nVFacSTot');
-            $table->integer('nVFacIgv');
-            $table->integer('nVFacVTot');
-            $table->primary('nprodpnlista');
+            $table->string('cVFacCod',10);
+            $table->integer('nClieCod')->unsigned();
+            $table->double('nVFacFemi', 15, 8);
+            $table->double('nVFacSTot',15,8);
+            $table->double('nVFacIgv',15,8);
+            $table->double('nVFacVTot',15,8);
+            $table->primary('cVFacCod');
             $table->foreign('nClieCod')->references('nClieCod')->on('cliente');
             
         });

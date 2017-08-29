@@ -14,13 +14,13 @@ class CreateClienteTable extends Migration
     public function up()
     {
          Schema::create('cliente', function (Blueprint $table) {
-            $table->string('ncliecod');
+            $table->increments('ncliecod')->unsigned();
             $table->string('cclietdoc');
             $table->string('ccliendoc');
             $table->string('ccliedesc');
             $table->string('ccliedirec');
             $table->string('cclieosb');
-            $table->primary('ncliecod');                       
+                               
             
         });
     }

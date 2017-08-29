@@ -14,15 +14,15 @@ class CreateVdetallefacturaTable extends Migration
     public function up()
     {
          Schema::create('vdetallefactura', function (Blueprint $table) {
-            $table->integer('nVDFacCod');
-            $table->string('cVFacCod');
-            $table->string('cProdCod');
+            $table->increments('nVDFacCod')->unsigned();
+            $table->string('cVFacCod',10);
+            $table->string('cProdCod',10);
             $table->integer('nVDFacCant');
             $table->integer('nVDFacUni');
             $table->integer('nVDFacDesc');
             $table->integer('nVDFacPVen');
 
-            $table->primary('nVDFacCod');
+            
             $table->foreign('cVFacCod')->references('cVFacCod')->on('vfactura');
             $table->foreign('cProdCod')->references('cProdCod')->on('producto');
             
