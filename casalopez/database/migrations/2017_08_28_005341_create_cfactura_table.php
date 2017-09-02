@@ -14,23 +14,24 @@ class CreateCfacturaTable extends Migration
     public function up()
     {
          Schema::create('cfactura', function (Blueprint $table) {
-            $table->string('ccfaccod',10);
+            $table->string('cCFacCod',10);
             $table->integer('nProvCod')->unsigned();
-            $table->string('ccfacconven');
-            $table->string('ccfacnped');
-            $table->string('ccfacocom');
-            $table->string('ccfacven');
-            $table->dateTime('tcfacfec');
-            $table->boolean('bcfaczon');
-            $table->string('ccfaccli');
-            $table->string('ccfacnguia');
-            $table->string('ccfacimpbru');
-            $table->string('ccfactotdes');
-            $table->string('ccfacvalven');
-            $table->string('ccfactotimp');
-            $table->string('ccfacotrgas');
-            $table->string('ccfacimppag');            
-            $table->primary('ccfaccod');
+            $table->string('cCFacNumFac');
+            $table->string('cCFacConVen');
+            $table->string('cCFacNped');
+            $table->string('cCFacOcom');
+            $table->string('cCFacVen');
+            $table->dateTime('tCFacFec');
+            $table->boolean('bCFacZon');
+            $table->string('cCFacCli');
+            $table->string('cCFacNguia');
+            $table->string('cCFacImpBru');
+            $table->string('cCFacTotDes');
+            $table->string('cCFacValVen');
+            $table->string('cCFacTotImp');
+            $table->string('cCFacOtrGas');
+            $table->string('cCFacImpPag');            
+            $table->primary('cCFacCod');
             $table->foreign('nProvCod')->references('nProvCod')->on('provedor');
         });
     }

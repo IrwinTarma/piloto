@@ -14,10 +14,10 @@ class CreateTipoTable extends Migration
     public function up()
     {
          Schema::create('tipo', function (Blueprint $table) {
-            $table->increments('ntipocod')->unsigned();
-            $table->string('ctipodesc');
-            $table->dateTime('ttipofcre');
-            $table->dateTime('ttipofmod');
+            $table->increments('nTipoCod')->unsigned();
+            $table->string('cTipoDesc');
+            $table->dateTime('tTipoFCre');
+            $table->dateTime('tTipoFMod');
                        
         });
     }

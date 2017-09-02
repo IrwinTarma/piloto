@@ -16,25 +16,25 @@ class CreateProductoTable extends Migration
          Schema::create('producto', function (Blueprint $table) {
             $table->string('cProdCod',10);
             $table->integer('nSTipCod')->unsigned();
-            $table->integer('nMedCod')->unsigned();
+            //$table->integer('nMedCod')->unsigned();
             $table->string('cProdDes');
-            $table->integer('nProdPsigv');
-            $table->integer('nProdPcigv');
-            $table->integer('nProdPbod');
-            $table->integer('nProdMgCom');
-            $table->integer('nProdPpubl');
-            $table->integer('nProdMgBod');
-            $table->integer('nProdDBase');
-            $table->integer('nProdPLista');
+            $table->double('dProdPsigv',15,8);
+            $table->double('dProdPcigv',15,8);
+            $table->double('dProdPbod',15,8);
+            $table->double('dProdMgCodist',15,8);
+            $table->double('dProdPpubl',15,8);
+            $table->double('dProdMgBod',15,8);
+            $table->double('dProdDBase',15,8);
+            $table->double('dProdPLista',15,8);
             $table->string('cProdCond');
-            $table->integer('nProdDprom');
-            $table->integer('nProdPNLista');
+            $table->double('dProdDprom',15,8);
+            $table->double('dProdPNLista',15,8);
             $table->boolean('bProdProm');            
 
 
             $table->primary('cProdCod');
             $table->foreign('nSTipCod')->references('nSTipCod')->on('subtipo');
-            $table->foreign('nMedCod')->references('nMedCod')->on('medida');
+            //$table->foreign('nMedCod')->references('nMedCod')->on('medida');
             
         });
     }

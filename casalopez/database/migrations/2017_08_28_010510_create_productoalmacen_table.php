@@ -17,9 +17,9 @@ class CreateProductoalmacenTable extends Migration
             $table->increments('nProAlmCod')->unsigned();
             $table->string('cProdCod',10);
             $table->integer('nAlmCod')->unsigned();
-            $table->integer('nProdMin');
-            $table->integer('nProdMax');
-            $table->integer('nProdStock');
+            $table->integer('nProdAlmMin');
+            $table->integer('nProdAlmMax');
+            $table->integer('nProdAlmStock');
             
             //$table->primary('nProAlmCod');
             $table->foreign('cProdCod')->references('cProdCod')->on('producto');

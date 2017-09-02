@@ -16,20 +16,22 @@ class CreateCdetallefacturaTable extends Migration
          Schema::create('cdetallefactura', function (Blueprint $table) {
             $table->increments('nCDFacCod');
             $table->string('cCFacCod',10);
-            $table->string('cProdCod',10);
+            //$table->string('cProdCod',10);
             $table->string('cCDFacCodArt');
             $table->string('cCDFacCodInt');
             $table->string('cCDFacDesc');
-            $table->integer('nCDFacCant');
-            $table->string('cCDFacPUni');
-            $table->string('cCDFacPVen');
-            $table->integer('nCDFacFecVen');
+            $table->integer('nCDFacUni');//fk
+            $table->double('dCDFacCant',15,8);
+            $table->string('dCDFacPUni');
+            $table->string('dCDFacPorDes');
+            $table->string('dCDFacPVen');            
             $table->string('cCDFacObs');
-            $table->string('cCDFacFIng');
+            $table->dateTime('tCDFacFReg');
+            $table->integer('nProAlmCod')->unsigned();
             
             //$table->primary('nCDFacCod');
             $table->foreign('cCFacCod')->references('cCFacCod')->on('cfactura');
-            $table->foreign('cProdCod')->references('cProdCod')->on('producto');
+            $table->foreign('nProAlmCod')->references('nProAlmCod')->on('productoalmacen');
             
         });
     }

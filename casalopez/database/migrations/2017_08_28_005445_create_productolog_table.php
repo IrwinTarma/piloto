@@ -18,17 +18,17 @@ class CreateProductologTable extends Migration
             $table->integer('nSTipCod');
             $table->double('nMedCod', 15, 8);
             $table->string('cProdDes');
-            $table->integer('nProdPsigv');
-            $table->integer('nProdPcigv');
-            $table->integer('nProdPbod');
-            $table->integer('nProdMgCom');
-            $table->integer('nProdPpubl');
-            $table->integer('nProdMgBod');
-            $table->integer('nProdDBase');
-            $table->integer('nProdPLista');
+            $table->integer('dProdPsigv');
+            $table->integer('dProdPcigv');
+            $table->integer('dProdPbod');
+            $table->integer('dProdMgCodist');
+            $table->integer('dProdPpubl');
+            $table->integer('dProdMgBod');
+            $table->integer('dProdDBase');
+            $table->integer('dProdPLista');
             $table->string('cProdCond');
-            $table->integer('nProdDprom');
-            $table->integer('nProdPNLista');
+            $table->integer('dProdDprom');
+            $table->integer('dProdPNLista');
             $table->boolean('bProdProm'); 
             
         });

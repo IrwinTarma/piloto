@@ -14,9 +14,9 @@ class CreateAlmacenTable extends Migration
     public function up()
     {
          Schema::create('almacen', function (Blueprint $table) {
-            $table->increments('nalmcod')->unsigned();
-            $table->string('calmnom');
-            $table->string('calmubi');                       
+            $table->increments('nAlmCod')->unsigned();
+            $table->string('cAlmNom');
+            $table->string('cAlmUbi');                       
             
         });
     }
