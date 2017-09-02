@@ -15,4 +15,9 @@ class ProvedorController extends Controller
     {
     	return view("provedor.index");
     }
+
+    public function store()
+    {
+    	return "guardado";
+    }
 }
