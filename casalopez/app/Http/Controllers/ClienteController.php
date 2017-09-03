@@ -13,7 +13,7 @@ class ClienteController extends Controller
 
     public function index()
     {
-    	//return view("provedor.index");
-    	return "holas";
+    	return view("cliente.storeCliente");
+ 
     }
 }
