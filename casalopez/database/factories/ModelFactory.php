@@ -25,7 +25,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 
 $factory->define(App\cliente::class, function (Faker\Generator $faker) {
     return [
-        //'nClieCod' => $faker->name,
+        'nClieCod' => App\cliente::inRandomOrder()->first()->id,
         'cClieTdoc' => $faker->text(8),
         'cClieNdoc' => $faker->text(8),
         'cClieDesc' => $faker->text(30),

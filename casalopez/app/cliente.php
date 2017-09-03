@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class cliente extends Model
 {
 	protected $fillable = [
-        'cClieTdoc', 'cClieNdoc', 'cClieDesc', 'cClieDirec', 'cClieObs'
+        'nClieCod','cClieTdoc', 'cClieNdoc', 'cClieDesc', 'cClieDirec', 'cClieObs'
     ];
 }
