@@ -13,7 +13,7 @@ class CreateProductologTable extends Migration
      */
     public function up()
     {
-         Schema::create('productolog', function (Blueprint $table) {
+         Schema::create('productologs', function (Blueprint $table) {
             $table->string('cProdCod',10);
             $table->integer('nSTipCod');
             $table->double('nMedCod', 15, 8);
@@ -41,6 +41,6 @@ class CreateProductologTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('productolog');
+        Schema::dropIfExists('productologs');
     }
 }

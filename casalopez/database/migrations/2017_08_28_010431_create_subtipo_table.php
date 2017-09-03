@@ -13,14 +13,14 @@ class CreateSubtipoTable extends Migration
      */
     public function up()
     {
-         Schema::create('subtipo', function (Blueprint $table) {
+         Schema::create('subtipos', function (Blueprint $table) {
             $table->increments('nSTipCod')->unsigned();
             $table->integer('nTipoCod')->unsigned();
             $table->string('cSTipDes');
             $table->integer('tSTipFcre');
             $table->integer('tSTipFmod');
             
-            $table->foreign('nTipoCod')->references('nTipoCod')->on('tipo');
+            $table->foreign('nTipoCod')->references('nTipoCod')->on('tipos');
             
         });
     }
@@ -32,6 +32,6 @@ class CreateSubtipoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('subtipo');
+        Schema::dropIfExists('subtipos');
     }
 }

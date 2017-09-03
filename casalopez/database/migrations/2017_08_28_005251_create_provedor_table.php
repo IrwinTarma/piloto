@@ -1,4 +1,4 @@
-<?php
+provedors<?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -13,13 +13,13 @@ class CreateProvedorTable extends Migration
      */
     public function up()
     {
-         Schema::create('provedor', function (Blueprint $table) {
+         Schema::create('provedors', function (Blueprint $table) {
             $table->increments('nProvCod')->unsigned();
-            $table->integer('nProvRuc')->unique();
+            $table->string('nProvRuc',11)->unique();
             $table->string('cProvNom');
             $table->string('cProvDir');
-            $table->integer('nProvTel');
-            $table->integer('nProvCel');
+            $table->string('cProvTel',11);
+            $table->string('cProvCel',11);
             $table->string('cProvEma');
             $table->string('cProvObs');
             $table->timestamps();
@@ -34,6 +34,6 @@ class CreateProvedorTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('provedor');
+        Schema::dropIfExists('provedors');
     }
 }

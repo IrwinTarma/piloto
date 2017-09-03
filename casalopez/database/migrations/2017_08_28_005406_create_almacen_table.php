@@ -13,7 +13,7 @@ class CreateAlmacenTable extends Migration
      */
     public function up()
     {
-         Schema::create('almacen', function (Blueprint $table) {
+         Schema::create('almacens', function (Blueprint $table) {
             $table->increments('nAlmCod')->unsigned();
             $table->string('cAlmNom');
             $table->string('cAlmUbi');                       
@@ -28,6 +28,6 @@ class CreateAlmacenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('almacen');
+        Schema::dropIfExists('almacens');
     }
 }

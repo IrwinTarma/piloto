@@ -13,7 +13,7 @@ class CreateMedidaTable extends Migration
      */
     public function up()
     {
-         Schema::create('medida', function (Blueprint $table) {
+         Schema::create('medidas', function (Blueprint $table) {
             $table->increments('nMedCod')->unsigned();
             $table->string('cMedNom');
             $table->string('cMedDesc');                       
@@ -28,6 +28,6 @@ class CreateMedidaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('medida');
+        Schema::dropIfExists('medidas');
     }
 }

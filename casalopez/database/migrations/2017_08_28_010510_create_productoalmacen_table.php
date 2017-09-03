@@ -13,7 +13,7 @@ class CreateProductoalmacenTable extends Migration
      */
     public function up()
     {
-         Schema::create('productoalmacen', function (Blueprint $table) {
+         Schema::create('productoalmacens', function (Blueprint $table) {
             $table->increments('nProAlmCod')->unsigned();
             $table->string('cProdCod',10);
             $table->integer('nAlmCod')->unsigned();
@@ -22,8 +22,8 @@ class CreateProductoalmacenTable extends Migration
             $table->integer('nProdAlmStock');
             
             //$table->primary('nProAlmCod');
-            $table->foreign('cProdCod')->references('cProdCod')->on('producto');
-            $table->foreign('nAlmCod')->references('nAlmCod')->on('almacen');
+            $table->foreign('cProdCod')->references('cProdCod')->on('productos');
+            $table->foreign('nAlmCod')->references('nAlmCod')->on('almacens');
             
         });
     }
@@ -35,6 +35,6 @@ class CreateProductoalmacenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vdetallefactura');
+        Schema::dropIfExists('productoalmacens');
     }
 }

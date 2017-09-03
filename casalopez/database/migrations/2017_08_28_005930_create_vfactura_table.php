@@ -13,7 +13,7 @@ class CreateVfacturaTable extends Migration
      */
     public function up()
     {
-         Schema::create('vfactura', function (Blueprint $table) {
+         Schema::create('vfacturas', function (Blueprint $table) {
             $table->string('cVFacCod',10);
             $table->integer('nClieCod')->unsigned();
             $table->double('dVFacFemi', 15, 8);
@@ -21,7 +21,7 @@ class CreateVfacturaTable extends Migration
             $table->double('dVFacIgv',15,8);
             $table->double('dVFacVTot',15,8);
             $table->primary('cVFacCod');
-            $table->foreign('nClieCod')->references('nClieCod')->on('cliente');
+            $table->foreign('nClieCod')->references('nClieCod')->on('clientes');
             
         });
     }
@@ -33,6 +33,6 @@ class CreateVfacturaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vfactura');
+        Schema::dropIfExists('vfacturas');
     }
 }

@@ -14,8 +14,8 @@ class ProvedorController extends Controller
 
     public function index()
     {
-    	//$provedor=Provedor::orderBy()
-    	return view("provedor.index");
+    	$provedors=provedor::orderBy("nProvCod","ASC")->paginate();
+    	return view("provedor.index",compact("provedors"));
     }
 
     public function store()
@@ -23,8 +23,20 @@ class ProvedorController extends Controller
     	return view("provedor.store");
     }
 
-    public function show()
+    public function show($id)
     {
-    	return view("provedor.show");
+    	$provedor=provedor::where('nProvCod','=',$id)->get();
+    	return view("provedor.show",compact("provedor"));
+    }
+
+    public function edit($id)
+    {
+    	$provedor=provedor::where('nProvCod','=',$id)->get();
+    	return view("provedor.edit",compact("provedor"));
+    }
+
+    public function create()
+    {
+    	return "creación";
     }
 }
