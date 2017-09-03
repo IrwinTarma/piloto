@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\provedor;
 
 class ProvedorController extends Controller
 {
@@ -13,11 +14,17 @@ class ProvedorController extends Controller
 
     public function index()
     {
+    	//$provedor=Provedor::orderBy()
     	return view("provedor.index");
     }
 
     public function store()
     {
-    	return "guardado";
+    	return view("provedor.store");
+    }
+
+    public function show()
+    {
+    	return view("provedor.show");
     }
 }
