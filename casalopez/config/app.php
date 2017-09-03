@@ -2,6 +2,7 @@
 
 return [
 
+    'empresa' => env('APP_EMPRESA', 'Laravel'),
     /*
     |--------------------------------------------------------------------------
     | Application Name
