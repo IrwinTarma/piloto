@@ -19,7 +19,7 @@ class CreateClienteTable extends Migration
             $table->string('cClieNdoc');
             $table->string('cClieDesc');
             $table->string('cClieDirec');
-            $table->string('cClieOsb');
+            $table->string('cClieObs');
                                
             
         });

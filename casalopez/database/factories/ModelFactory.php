@@ -22,3 +22,14 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\cliente::class, function (Faker\Generator $faker) {
+    return [
+        //'nClieCod' => $faker->name,
+        'cClieTdoc' => $faker->text(8),
+        'cClieNdoc' => $faker->text(8),
+        'cClieDesc' => $faker->text(30),
+        'cClieDirec' => $faker->text(30),
+        'cClieObs' => $faker->text(50)
+    ];
+});

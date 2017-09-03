@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('provedor','ProvedorController');
+
+Route::resource('cliente','ClienteController');
