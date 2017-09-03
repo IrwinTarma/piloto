@@ -6,36 +6,26 @@
     
 <div class="registerInner">
         <div class="col-md-12 signUp">
-            <h3 class="headerSign">Registrar Cliente</h3>
+            <h3 class="headerSign">@yield('title')</h3>
             <form action="" method="post">
 
                 <div class="form-group">
 	                <div class="row">
 	                	<div class="col-md-4">
-	                    	<input class="form-control" type="text" name="ruc" RUCd="ruc" placeholder="RUC">
+	                    	<input class="form-control" type="text" name="tdoc" id="tdoc" placeholder="Tipo de Doc.">
 	                	</div>
 	                	<div class="col-md-8">
-	                    	<input class="form-control" type="text" name="nombre" id="nombre" placeholder="NOMBRE">
+	                    	<input class="form-control" type="text" name="ndoc" id="ndoc" placeholder="Número de Doc.">
 	                    </div>
 	                </div>
 	            </div>
 
 	            <div class="form-group">
-	                <input class="form-control" type="text" name="dir" id="dir" placeholder="DIRECCION">	                    
+	                <input class="form-control" type="text" name="ncli" id="ncli" placeholder="Descripción (Nombre/Razón Social)">	                    
 	            </div>
 
                 <div class="form-group">
-	                <div class="row">
-	                	<div class="col-md-6">                
-	                    	<input class="form-control" type="text" name="email" id="email" placeholder="EMAIL">
-	                    </div>
-	                	<div class="col-md-3">
-	                    	<input class="form-control" type="text" name="tel" id="tel" placeholder="TELEFONO">
-	              		</div>     
-	                 	<div class="col-md-3">
-	                    	<input class="form-control" type="text" name="cel" id="cel" placeholder="CELULAR">
-	                    </div>           	                    
-	                </div>
+					<input class="form-control" type="text" name="direccion" id="direccion" placeholder="Dirección ">	
                 </div>
 
                 <div class="form-group">
@@ -48,6 +38,7 @@
                 </div-->
 
                 <button type="submit" class=" signbuttons btn btn-primary">Guardar</button>
+                <button type="submit" class=" signbuttons btn btn-default">Cancelar</button>
 
             </form>
         </div>
