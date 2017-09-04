@@ -35,6 +35,13 @@ class ProvedorController extends Controller
     	return view("provedor.edit",compact("provedor"));
     }
 
+    public function destroy($id)
+    {
+        $provedor=provedor::where('nProvCod','=',$id);
+        $provedor->delete();
+        return view("provedor.index")->with('info','El proveedor fue eliminado.');
+    }
+
     public function create()
     {
     	return "creación";

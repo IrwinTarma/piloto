@@ -37,7 +37,7 @@
 						<a href="{{ route('provedor.show',$prov->nProvCod) }}">Ver</a>
 						</td>
 						<td>
-						<a href="{{ route('provedor.edit',$prov->nProvCod) }}">editar</a>
+						<a href="{{ route('provedor.edit',$prov->nProvCod) }}">Editar</a>
 						</td>
 						<td>borrar</td>
 					</tr>
