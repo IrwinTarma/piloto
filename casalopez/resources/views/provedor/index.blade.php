@@ -1,10 +1,10 @@
 @extends('layouts.app')
-
+@section('title', 'Listado de Proveedores')
 @section('content')
 
 	<div class="col-sm-12">
 			<h2>
-				Listado de Proveedores
+				@yield('title')
 				<a href="{{ route('provedor.create') }}" class="btn btn-primary pull-right">Nuevo</a>	
 			</h2>
 			<table class="table table-hover table-striped">

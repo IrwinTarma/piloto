@@ -13,14 +13,14 @@ class CreateLogmovimientosTable extends Migration
      */
     public function up()
     {
-        Schema::create('logmovimientos', function (Blueprint $table) {
+        Schema::create('Logmovimientos', function (Blueprint $table) {
             $table->integer('nLMovCod');
             $table->integer('id')->unsigned();
             $table->string('cLogTabAfe');
             $table->string('cLogAcc');
             $table->timestamps();
             $table->primary('nLMovCod');
-            $table->foreign('id')->references('id')->on('users');
+            $table->foreign('id')->references('id')->on('Users');
         });
     }
 

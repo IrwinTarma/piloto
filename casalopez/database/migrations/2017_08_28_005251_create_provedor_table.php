@@ -13,7 +13,7 @@ class CreateProvedorTable extends Migration
      */
     public function up()
     {
-         Schema::create('provedors', function (Blueprint $table) {
+         Schema::create('Provedors', function (Blueprint $table) {
             $table->increments('nProvCod')->unsigned();
             $table->string('nProvRuc',11)->unique();
             $table->string('cProvNom');

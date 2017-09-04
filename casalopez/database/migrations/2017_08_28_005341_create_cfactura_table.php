@@ -13,7 +13,7 @@ class CreateCfacturaTable extends Migration
      */
     public function up()
     {
-         Schema::create('cfacturas', function (Blueprint $table) {
+         Schema::create('Cfacturas', function (Blueprint $table) {
             $table->string('cCFacCod',10);
             $table->integer('nProvCod')->unsigned();
             $table->string('cCFacNumFac');
@@ -32,7 +32,7 @@ class CreateCfacturaTable extends Migration
             $table->string('cCFacOtrGas');
             $table->string('cCFacImpPag');            
             $table->primary('cCFacCod');
-            $table->foreign('nProvCod')->references('nProvCod')->on('provedors');
+            $table->foreign('nProvCod')->references('nProvCod')->on('Provedors');
         });
     }
 

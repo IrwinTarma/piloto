@@ -13,15 +13,15 @@ class CreateMedidaDescuentoTable extends Migration
      */
     public function up()
     {
-         Schema::create('medidaproductos', function (Blueprint $table) {
+         Schema::create('Medidaproductos', function (Blueprint $table) {
             $table->increments('nMedProCod');
             $table->integer('nMedCod')->unsigned();
             $table->string('cProdCod',10);
             $table->double('dMedProPor',15,8);
             $table->integer('nMedProCanUni');
             
-            $table->foreign('nMedCod')->references('nMedCod')->on('medidas');
-            $table->foreign('cProdCod')->references('cProdCod')->on('productos');            
+            $table->foreign('nMedCod')->references('nMedCod')->on('Medidas');
+            $table->foreign('cProdCod')->references('cProdCod')->on('Productos');            
         });
     }
 

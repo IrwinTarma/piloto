@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMedidaTable extends Migration
+class CreateProvedorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateMedidaTable extends Migration
      */
     public function up()
     {
-         Schema::create('Medidas', function (Blueprint $table) {
-            $table->increments('nMedCod')->unsigned();
-            $table->string('cMedNom');
-            $table->string('cMedDesc');                       
-          
+        Schema::create('provedors', function (Blueprint $table) {
+            $table->increments('id');
+            $table->timestamps();
         });
     }
 
@@ -28,6 +26,6 @@ class CreateMedidaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('medidas');
+        Schema::dropIfExists('provedors');
     }
 }

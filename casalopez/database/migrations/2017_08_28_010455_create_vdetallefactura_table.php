@@ -13,7 +13,7 @@ class CreateVdetallefacturaTable extends Migration
      */
     public function up()
     {
-         Schema::create('vdetallefacturas', function (Blueprint $table) {
+         Schema::create('Vdetallefacturas', function (Blueprint $table) {
             $table->increments('nVDFacCod')->unsigned();
             $table->string('cVFacCod',10);
             $table->string('cProdCod',10);
@@ -23,8 +23,8 @@ class CreateVdetallefacturaTable extends Migration
             $table->integer('nVDFacPVen');
 
             
-            $table->foreign('cVFacCod')->references('cVFacCod')->on('vfacturas');
-            $table->foreign('cProdCod')->references('cProdCod')->on('productos');
+            $table->foreign('cVFacCod')->references('cVFacCod')->on('Vfacturas');
+            $table->foreign('cProdCod')->references('cProdCod')->on('Productos');
             
         });
     }

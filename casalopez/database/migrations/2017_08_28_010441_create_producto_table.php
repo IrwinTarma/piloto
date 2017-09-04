@@ -13,7 +13,7 @@ class CreateProductoTable extends Migration
      */
     public function up()
     {
-         Schema::create('productos', function (Blueprint $table) {
+         Schema::create('Productos', function (Blueprint $table) {
             $table->string('cProdCod',10);
             $table->integer('nSTipCod')->unsigned();
             //$table->integer('nMedCod')->unsigned();
@@ -33,7 +33,7 @@ class CreateProductoTable extends Migration
 
 
             $table->primary('cProdCod');
-            $table->foreign('nSTipCod')->references('nSTipCod')->on('subtipos');
+            $table->foreign('nSTipCod')->references('nSTipCod')->on('Subtipos');
             //$table->foreign('nMedCod')->references('nMedCod')->on('medida');
             
         });

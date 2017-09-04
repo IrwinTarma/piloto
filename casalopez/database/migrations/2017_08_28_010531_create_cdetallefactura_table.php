@@ -13,7 +13,7 @@ class CreateCdetallefacturaTable extends Migration
      */
     public function up()
     {
-         Schema::create('cdetallefacturas', function (Blueprint $table) {
+         Schema::create('Cdetallefacturas', function (Blueprint $table) {
             $table->increments('nCDFacCod');
             $table->string('cCFacCod',10);
             //$table->string('cProdCod',10);
@@ -30,8 +30,8 @@ class CreateCdetallefacturaTable extends Migration
             $table->integer('nProAlmCod')->unsigned();
             
             //$table->primary('nCDFacCod');
-            $table->foreign('cCFacCod')->references('cCFacCod')->on('cfacturas');
-            $table->foreign('nProAlmCod')->references('nProAlmCod')->on('productoalmacens');
+            $table->foreign('cCFacCod')->references('cCFacCod')->on('Cfacturas');
+            $table->foreign('nProAlmCod')->references('nProAlmCod')->on('Productoalmacens');
             
         });
     }

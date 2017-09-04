@@ -2,6 +2,7 @@
 
 return [
 
+    'encabezado' => env('APP_ENCABEZADO', 'Home'),
     'empresa' => env('APP_EMPRESA', 'Laravel'),
     /*
     |--------------------------------------------------------------------------
