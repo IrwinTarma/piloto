@@ -1,12 +1,13 @@
 @extends('layouts.app')
-@section('title', 'Registrar Cliente')
+@section('title', 'Cliente')
+@section('encabezado', 'Registrar Clientes')
 @section('content')
 
 <div class="row col-md-8 col-md-offset-2 registeration">
     
 <div class="registerInner">
         <div class="col-md-12 signUp">
-            <h3 class="headerSign">@yield('title')</h3>
+            <h3 class="headerSign">@yield('encabezado')</h3>
             <form action="" method="post">
 
                 <div class="form-group">
@@ -31,11 +32,6 @@
                 <div class="form-group">
                 	<textarea class="form-control" rows="5" id="obs" name="obs" placeholder="OBSERVACION" value=""></textarea>
                 </div>
-
-                <!--div class="form-group">
-                    <label for="birthday" class="darktext">Birthday</label>
-                    <input class="form-control" type="date" name="birthday" id="birthday" value="">
-                </div-->
 
                 <button type="submit" class=" signbuttons btn btn-primary">Guardar</button>
                 <button type="submit" class=" signbuttons btn btn-default">Cancelar</button>

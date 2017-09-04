@@ -6,7 +6,7 @@
 	<div class="col-sm-12">
 		<h3>
 			@yield('encabezado')
-			<a href="" class="btn btn-primary pull-right">Nuevo</a>	
+			<a href="{{ route('cliente.create')}}" class="btn btn-primary pull-right">Nuevo</a>	
 		</h3>
 
 		<table class="table table-hover table-striped">
@@ -22,6 +22,25 @@
 				</tr>
 			</thead>
 			<tbody>
+				@foreach($clientes as $tcliente)
+				<tr>
+					<td>{{ $tcliente->nClieCod }}</td>
+					<td>{{ $tcliente->cClieTdoc }}</td>
+					<td>{{ $tcliente->cClieNdoc }}</td>
+					<td>{{ $tcliente->cClieDesc }}</td>
+					<td>{{ $tcliente->cClieDirec }}</td>
+					<td>
+						<p style="font-size: 9px;">(Obs. {{ $tcliente->cClieObs }})</p>
+					</td>
+					<td>
+					<a href="{{ route('cliente.show',$tcliente->nClieCod) }}">Ver</a>
+					</td>
+					<td>
+					<a href="{{ route('cliente.edit',$tcliente->nClieCod) }}">editar</a>
+					</td>
+					<td>borrar</td>
+				</tr>
+				@endforeach			
 			</tbody>
 		</table>
 
