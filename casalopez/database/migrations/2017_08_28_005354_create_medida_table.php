@@ -28,6 +28,6 @@ class CreateMedidaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('medidas');
+        Schema::dropIfExists('Medidas');
     }
 }

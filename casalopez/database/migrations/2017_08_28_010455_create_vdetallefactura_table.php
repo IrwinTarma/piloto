@@ -36,6 +36,6 @@ class CreateVdetallefacturaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vdetallefacturas');
+        Schema::dropIfExists('Vdetallefacturas');
     }
 }

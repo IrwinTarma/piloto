@@ -41,6 +41,6 @@ class CreateProductologTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('productologs');
+        Schema::dropIfExists('Productologs');
     }
 }

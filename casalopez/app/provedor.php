@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Provedor extends Model
 {
-     protected $table = 'provedors';
+    protected $table = 'Provedors';
 
     /**
     * The database primary key value.

@@ -32,6 +32,6 @@ class CreateMedidaDescuentoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('medidaproductos');
+        Schema::dropIfExists('Medidaproductos');
     }
 }

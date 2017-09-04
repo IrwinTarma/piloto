@@ -33,6 +33,6 @@ class CreateVfacturaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vfacturas');
+        Schema::dropIfExists('Vfacturas');
     }
 }

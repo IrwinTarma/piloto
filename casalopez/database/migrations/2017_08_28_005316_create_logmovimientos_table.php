@@ -31,6 +31,6 @@ class CreateLogmovimientosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('logmovimientos');
+        Schema::dropIfExists('Logmovimientos');
     }
 }

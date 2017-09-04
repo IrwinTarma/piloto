@@ -35,6 +35,6 @@ class CreateProductoalmacenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('productoalmacens');
+        Schema::dropIfExists('Productoalmacens');
     }
 }

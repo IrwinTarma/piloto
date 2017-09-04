@@ -43,6 +43,6 @@ class CreateCdetallefacturaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cdetallefacturas');
+        Schema::dropIfExists('Cdetallefacturas');
     }
 }
