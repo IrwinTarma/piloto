@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\provedor;
+//use App\Http\Requests\ProvedorRequest;
 
 class ProvedorController extends Controller
 {
@@ -18,9 +19,36 @@ class ProvedorController extends Controller
     	return view("provedor.index",compact("provedors"));
     }
 
-    public function store()
+    public function store(Request $request)
     {
-    	return view("provedor.store");
+    	$provedor=new provedor;
+        $provedor->nProvRuc=$request->ruc;
+        $provedor->cProvNom=$request->nombre;
+        $provedor->cProvDir=$request->dir;
+        $provedor->cProvTel=$request->tel;
+        $provedor->cProvCel=$request->cel;            
+        $provedor->cProvEma=$request->email;
+        $provedor->cProvObs=$request->obs;
+        
+        $provedor->save();
+
+        return redirect()->route('provedor.index')->with('info','El proveedor fue creado.');  
+    }
+
+    public function update(Request $request,$id)
+    {
+        $provedor=provedor::find($id);
+        $provedor->nProvRuc=$request->ruc;
+        $provedor->cProvNom=$request->nombre;
+        $provedor->cProvDir=$request->dir;
+        $provedor->cProvTel=$request->tel;
+        $provedor->cProvCel=$request->cel;            
+        $provedor->cProvEma=$request->email;
+        $provedor->cProvObs=$request->obs;
+        
+        $provedor->save();
+
+        return redirect()->route('provedor.show',$id)->with('info','El proveedor fue actualizado.');  
     }
 
     public function show($id)
@@ -39,11 +67,11 @@ class ProvedorController extends Controller
     {
         $provedor=provedor::where('nProvCod','=',$id);
         $provedor->delete();
-        return view("provedor.index")->with('info','El proveedor fue eliminado.');
+        return back()->with('info','El proveedor fue eliminado.');
     }
 
     public function create()
     {
-    	return "creación";
+    	return view("provedor.create");
     }
 }

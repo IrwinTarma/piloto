@@ -13,7 +13,7 @@ class ProvedorRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,13 @@ class ProvedorRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'nProvRuc' => 'required',
+            'cProvNom' => 'required',
+            'cProvDir' => 'required',
+            //'cProvTel',
+            'cProvCel' => 'required',
+            'cProvEma' => 'required'
+            //'cProvObs'
         ];
     }
 }

@@ -7,6 +7,7 @@
 				@yield('title')
 				<a href="{{ route('provedor.create') }}" class="btn btn-primary pull-right">Nuevo</a>	
 			</h2>
+			@include('provedor.fragment.info')
 			<table class="table table-hover table-striped">
 				<thead>
 					<tr>
@@ -34,12 +35,19 @@
 						<td>{{ $prov->cProvTel }}</td>
 						<td>{{ $prov->cProvCel }}</td>
 						<td>
-						<a href="{{ route('provedor.show',$prov->nProvCod) }}">Ver</a>
+						<a href="{{ route('provedor.show',$prov->nProvCod) }}" class="btn btn-link">Ver</a>
 						</td>
 						<td>
-						<a href="{{ route('provedor.edit',$prov->nProvCod) }}">Editar</a>
+						<a href="{{ route('provedor.edit',$prov->nProvCod) }}" class="btn btn-link">Editar</a>
 						</td>
-						<td>borrar</td>
+						<td>
+							<form action="{{ route('provedor.destroy',$prov->nProvCod) }}" method="POST">
+								{{ csrf_field() }}
+								<input type="hidden" name="_method" value="DELETE">
+								<button class="btn btn-link">borrar</button>
+							</form>
+
+						</td>
 					</tr>
 					@endforeach
 				</tbody>

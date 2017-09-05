@@ -10,12 +10,13 @@
 <div class="registerInner">
         <div class="col-md-12 signUp">
             <h3 class="headerSign">@yield('subtitulo') | {{ $prove->cProvNom }}</h3>
-            <form action="" method="post">
-
+            <form action="{{ route('provedor.update',$prove->nProvCod) }}" method="POST">
+				{{ csrf_field() }}
+				<input type="hidden" name="_method" value="PUT">
                 <div class="form-group">
 	                <div class="row">
 	                	<div class="col-md-4">
-	                    	<input class="form-control" type="text" name="ruc" RUCd="ruc" placeholder="RUC" value="{{ $prove->nProvRuc }}">
+	                    	<input class="form-control" type="text" name="ruc" RUCd="ruc" placeholder="RUC" value="{{ $prove->nProvRuc }}" value="" maxlength="11">
 	                	</div>
 	                	<div class="col-md-8">
 	                    	<input class="form-control" type="text" name="nombre" id="nombre" placeholder="NOMBRE" value="{{ $prove->cProvNom }}">
@@ -33,10 +34,10 @@
 	                    	<input class="form-control" type="text" name="email" id="email" placeholder="EMAIL" value="{{ $prove->cProvEma }}">
 	                    </div>
 	                	<div class="col-md-3">
-	                    	<input class="form-control" type="text" name="tel" id="tel" placeholder="TELEFONO" value="{{ $prove->cProvTel }}">
+	                    	<input class="form-control" type="text" name="tel" id="tel" placeholder="TELEFONO" value="{{ $prove->cProvTel }}" value="" maxlength="11">
 	              		</div>     
 	                 	<div class="col-md-3">
-	                    	<input class="form-control" type="text" name="cel" id="cel" placeholder="CELULAR" value="{{ $prove->cProvCel }}">
+	                    	<input class="form-control" type="text" name="cel" id="cel" placeholder="CELULAR" value="{{ $prove->cProvCel }}" value="" maxlength="11">
 	                    </div>           	                    
 	                </div>
                 </div>
@@ -50,9 +51,9 @@
                     <input class="form-control" type="date" name="birthday" id="birthday" value="">
                 </div-->
 
-                <button type="submit" class=" signbuttons btn btn-primary">Guardar</button>
-
+                <button type="submit" class=" signbuttons btn btn-primary">Guardar</button> <a href="{{ redirect()->getUrlGenerator()->previous() }}" class=" signbuttons btn btn-primary">Cancelar</a>
             </form>
+
         </div>
              
 </div>
