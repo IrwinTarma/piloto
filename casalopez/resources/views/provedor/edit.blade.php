@@ -1,4 +1,5 @@
-@extends('layouts.app')
+
+ @extends('layouts.app')
 @section('subtitulo', 'Edición de Proveedor')
 
 @section('content')

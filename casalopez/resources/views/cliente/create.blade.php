@@ -9,7 +9,7 @@
         <div class="col-md-8">
             <h3 class="headerSign">
                 @yield('encabezado')
-                <a href="{{ route('cliente.index')}}" class="btn btn-default pull-right">Listado</a>
+                <a href="{{ route('cliente.index') }}" class="btn btn-default pull-right">Listado</a>
             </h3>
 
             @include('cliente.fragmento.error')
@@ -22,7 +22,7 @@
         </div>
         <!--div class="col-sm-4">
             @include('cliente.fragmento.aside')
-        </div>
+        </div-->
              
 </div>
         

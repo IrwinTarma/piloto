@@ -1,27 +1,26 @@
 <div class="form-group">
-    {!! Form::label('cClieTdoc', 'Tipo de Doc.') !!}
-    {!! Form::text('cClieTdoc', null, ['class' => 'form-control']) !!}
-</div>
-
-
-<div class="form-group">
-    {!! Form::label('cClieNdoc', 'Número de Doc.') !!}
-    {!! Form::text('cClieNdoc', null, ['class' => 'form-control']) !!}
-</div>
-
-<div class="form-group">
-    {!! Form::label('cClieDesc', 'Descripción (Nombre/Razón Social)') !!}
-    {!! Form::text('cClieDesc', null, ['class' => 'form-control']) !!}
+    <div class="row">
+        <div class="col-md-4">
+            <!--input class="form-control" type="text" name="ruc" RUCd="ruc" placeholder="RUC" value="" maxlength="11"-->
+            {!! Form::text('cClieTdoc', null, ['class' => 'form-control', 'placeholder'=>'Tipo de Doc.']) !!}
+        </div> 
+        <div class="col-md-8">
+             {!! Form::text('cClieNdoc', null, ['class' => 'form-control', 'placeholder'=>'Número de Doc.']) !!}
+        </div>
+    </div>
 </div>
 
 <div class="form-group">
-    {!! Form::label('cClieDirec', 'Dirección') !!}
-    {!! Form::text('cClieDirec', null, ['class' => 'form-control']) !!}
+  <!--   {!! Form::label('cClieDesc', 'Descripción (Nombre/Razón Social)') !!} -->
+    {!! Form::text('cClieDesc', null, ['class' => 'form-control', 'placeholder'=>'Descripción (Nombre/Razón Social)']) !!}
 </div>
 
 <div class="form-group">
-    {!! Form::label('cClieObs', 'OBSERVACION') !!}
-    {!! Form::textarea('cClieObs', null, ['class' => 'form-control']) !!}
+    {!! Form::text('cClieDirec', null, ['class' => 'form-control', 'placeholder'=>'Dirección']) !!}
+</div>
+
+<div class="form-group">
+    {!! Form::textarea('cClieObs', null, ['class' => 'form-control', 'placeholder'=>'Observación', 'rows'=>'5'] ) !!}
 </div>
 
 <div class="form-group">

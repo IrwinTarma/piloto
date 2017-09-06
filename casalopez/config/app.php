@@ -79,7 +79,8 @@ return [
     |
     */
 
-    'locale' => 'en',
+    //'locale' => 'en', cambio djbs
+    'locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -178,7 +179,9 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
         Collective\Html\HtmlServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
     ],
 
     /*

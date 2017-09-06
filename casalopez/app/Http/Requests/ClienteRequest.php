@@ -28,7 +28,7 @@ class ClienteRequest extends FormRequest
             'cClieNdoc' => 'required',
             'cClieDesc' => 'required',
             'cClieDirec' => 'required',
-            'cClieObs' => 'required'
+            //'cClieObs' => 'required'
         ];
     }
 }
