@@ -12,7 +12,7 @@
                 <a href="{{ route('cliente.index')}}" class="btn btn-default pull-right">Listado</a>
             </h3>
             
-            @include('cliente.fragmento.error')
+            <!-- @include('cliente.fragmento.error') -->
 
             {{!! Form:model($clientes, ['route' =>['cliente.update', $clientes->nClieCod], 'method' => 'PUT'] !!}}
 

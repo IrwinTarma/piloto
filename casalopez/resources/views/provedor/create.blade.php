@@ -18,7 +18,7 @@
 	                <div class="row">
 	                	<div class="col-md-4">
 	                    	<input class="form-control" type="text" name="ruc" RUCd="ruc" placeholder="RUC" value="" maxlength="11">
-	                	</div>
+	                	</div> 
 	                	<div class="col-md-8">
 	                    	<input class="form-control" type="text" name="nombre" id="nombre" placeholder="NOMBRE" value="">
 	                    </div>

@@ -12,10 +12,11 @@
                 <a href="{{ route('cliente.index') }}" class="btn btn-default pull-right">Listado</a>
             </h3>
 
-            @include('cliente.fragmento.error')
+            <!-- @include('cliente.fragmento.error') -->
 
             {!! Form::open(['route' => 'cliente.store']) !!}
-
+                {{ csrf_field() }}
+                
                 @include('cliente.fragmento.form')
 
             {!! Form::close() !!}
