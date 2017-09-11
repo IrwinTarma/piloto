@@ -20,31 +20,52 @@ class ClienteController extends Controller
 
     public function store(ClienteRequest $request)
     {
-        return 'cliente guardado';
+        $cliente = new Cliente;
+        $cliente->cClieTdoc = $request->cClieTdoc;
+        $cliente->cClieNdoc = $request->cClieNdoc;
+        $cliente->cClieDesc = $request->cClieDesc;
+        $cliente->cClieDirec = $request->cClieDirec;
+        $cliente->cClieObs = $request->cClieObs;
+
+        $cliente->save();
+
+        return redirect()->route('cliente.index')->with('El cliente fue guardado');
+        
     }
 
    public function edit($id)
     {
-        $clientes = Cliente::find($id);
-        return view('cliente.edit', compact('clientes'));
+        $cliente = Cliente::find($id);
+        // $cliente = Cliente::where('nClieCod','=',$id)->get();
+        // $cliente = Cliente::where('nClieCod','=',$id)->first();
+        return view('cliente.edit', compact('cliente'));
     }
 
-   public function update(ClienteRequest $request, $id)
+   public function update(ClienteRequest $request,$id)
     {
-        return 'cliente actualizado' . $id;
+        $cliente = Cliente::find($id);
+
+        $cliente->cClieTdoc = $request->cClieTdoc;
+        $cliente->cClieNdoc = $request->cClieNdoc;
+        $cliente->cClieDesc = $request->cClieDesc;
+        $cliente->cClieDirec = $request->cClieDirec;
+        $cliente->cClieObs = $request->cClieObs;
+
+        $cliente->save();
+        
+        return redirect()->route('cliente.index')->with('El cliente fue actualizado');
+        
     }
 
     public function index()
     {
-    	$clientes = Cliente::orderby('nClieCod', 'DESC')->paginate();
-    	return view('cliente.index', compact('clientes'));
+    	$cliente = Cliente::orderby('nClieCod', 'ASC')->paginate(5);
+    	return view('cliente.index', compact('cliente'));
     }
 
    public function show($id)
     {
-    	$clientes = Cliente::find($id);
-    	return view('cliente.show', compact('clientes'));
+        $cliente = Cliente::find($id);
+    	return view('cliente.show', compact('cliente'));
     }
-
-
 }

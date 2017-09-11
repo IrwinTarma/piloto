@@ -24,6 +24,7 @@ class ClienteRequest extends FormRequest
     public function rules()
     {
         return [
+            //'nClieCod'  => 'required';
             'cClieTdoc' => 'required',
             'cClieNdoc' => 'required',
             'cClieDesc' => 'required',
