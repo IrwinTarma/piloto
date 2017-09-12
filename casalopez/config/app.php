@@ -262,6 +262,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+<<<<<<< HEAD
 
 		/*
          * Third Party Aliases
@@ -277,6 +278,9 @@ return [
         /*
          * Collective Html
          */
+=======
+        
+>>>>>>> cc011c2615d34e8c63ba59c3204dc8c80a969094
         'Form' => Collective\Html\FormFacade::class,
         'HTML' => Collective\Html\HtmlFacade::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,

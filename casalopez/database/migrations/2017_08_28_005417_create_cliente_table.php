@@ -16,13 +16,19 @@ class CreateClienteTable extends Migration
          Schema::create('Clientes', function (Blueprint $table) {
             $table->increments('nClieCod')->unsigned();
             $table->string('cClieTdoc');
-            $table->string('cClieNdoc');
+            $table->string('cClieNdoc',8);
             $table->string('cClieDesc');
             $table->string('cClieDirec');
-            $table->string('cClieObs');
-                               
-            
+            $table->string('cClieObs')->nullable();
+            $table->timestamps();
+
         });
+/*
+         Schema::table('Clientes', function (Blueprint $table){
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('update_at')->nullable();
+         });
+*/
     }
 
     /**
