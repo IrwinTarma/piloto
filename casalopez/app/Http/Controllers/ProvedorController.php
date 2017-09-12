@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\provedor;
-use App\Http\Requests\ProvedorRequest;
-
+//use App\Http\Requests\ProvedorRequest;
 
 class ProvedorController extends Controller
 {
@@ -20,7 +19,7 @@ class ProvedorController extends Controller
     	return view("provedor.index",compact("provedors"));
     }
 
-    public function store(ProvedorRequest $request)
+    public function store(Request $request)
     {
     	$provedor=new provedor;
         $provedor->nProvRuc=$request->ruc;
@@ -36,7 +35,7 @@ class ProvedorController extends Controller
         return redirect()->route('provedor.index')->with('info','El proveedor fue creado.');  
     }
 
-    public function update(ProvedorRequest $request,$id)
+    public function update(Request $request,$id)
     {
         $provedor=provedor::find($id);
         $provedor->nProvRuc=$request->ruc;
@@ -54,14 +53,14 @@ class ProvedorController extends Controller
 
     public function show($id)
     {
-    	$provedor=provedor::where('nProvCod','=',$id)->get();
-    	return view("provedor.show",compact("provedor"));
+    	$prove=provedor::where('nProvCod','=',$id)->get()->first();
+    	return view("provedor.show",compact("prove"));
     }
 
     public function edit($id)
     {
-    	$provedor=provedor::where('nProvCod','=',$id)->get();
-    	return view("provedor.edit",compact("provedor"));
+    	$prove=provedor::where('nProvCod','=',$id)->get()->first();
+    	return view("provedor.edit",compact("prove"));
     }
 
     public function destroy($id)

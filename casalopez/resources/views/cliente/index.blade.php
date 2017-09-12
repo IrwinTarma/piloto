@@ -8,7 +8,7 @@
 			@yield('encabezado')
 			<a href="{{ route('cliente.create')}}" class="btn btn-primary pull-right">Nuevo</a>	
 		</h3>
-		@include('cliente.fragmento.info')
+
 		<table class="table table-hover table-striped">
 			<thead>
 				<tr>
@@ -43,9 +43,6 @@
 				@endforeach			
 			</tbody>
 		</table>
-		{!! $clientes->render() !!}
-	</div>
-	<div class="col-sm-4">
-		@include('cliente.fragmento.aside')
-	</div>
+
+	</div>	
 @endsection

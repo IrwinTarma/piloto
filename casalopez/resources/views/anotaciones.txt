@@ -1,0 +1,22 @@
+<a href="http://127.0.0.1:8001/admin/access/user/1/login-as" class="btn btn-xs btn-success">
+		<i class="fa fa-lock" data-toggle="tooltip" data-placement="top" title="Login As Franck Mercado"></i>
+	</a> 
+	<a href="http://127.0.0.1:8001/admin/access/user/1" class="btn btn-xs btn-info">
+		<i class="fa fa-search" data-toggle="tooltip" data-placement="top" title="" data-original-title="View"></i>
+	</a> 
+	<a href="http://127.0.0.1:8001/admin/access/user/1/edit" class="btn btn-xs btn-primary">
+		<i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i>
+	</a> 
+	<a href="http://127.0.0.1:8001/admin/access/user/1/password/change" class="btn btn-xs btn-info">
+		<i class="fa fa-refresh" data-toggle="tooltip" data-placement="top" title="Change Password"></i>
+	</a> 
+	<a href="http://127.0.0.1:8001/admin/access/user/1/mark/0" class="btn btn-xs btn-warning">
+		<i class="fa fa-pause" data-toggle="tooltip" data-placement="top" title="Deactivate"></i>
+	</a> 
+	<a data-method="delete" data-trans-button-cancel="Cancel" data-trans-button-confirm="Delete" data-trans-title="Are you sure?" class="btn btn-xs btn-danger" style="cursor:pointer;" onclick="$(this).find(&quot;form&quot;).submit();">
+		<i class="fa fa-trash" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i>
+		<form action="http://127.0.0.1:8001/admin/access/user/1" method="POST" name="delete_item" style="display:none">
+		   <input type="hidden" name="_method" value="delete">
+		   <input type="hidden" name="_token" value="MAkHFJSuu2TYPiebIcKDFTy53mpZB3g3TGN9svAi">
+		</form>
+	</a> 
