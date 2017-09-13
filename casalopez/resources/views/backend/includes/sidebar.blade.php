@@ -71,9 +71,9 @@
                         </a>
                     </li>                   
                     <li class="">
-                        <a href="{{ route('cliente.index') }}">
+                        <a href="{{ route('almacen.index') }}">
                             <i class="fa fa-circle-o"></i>
-                            <span>Clientes</span>
+                            <span>Almacenes</span>
                         </a>
                     </li>                   
                 </ul>

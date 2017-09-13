@@ -20,3 +20,14 @@
 		   <input type="hidden" name="_token" value="MAkHFJSuu2TYPiebIcKDFTy53mpZB3g3TGN9svAi">
 		</form>
 	</a> 
+
+	corregir :
+
+	.table > thead > tr > th {
+    border-right: 2px solid #3c8dbc;
+    /* border-left: 2px solid #3c8dbc; */
+    border-top: 2px solid #3c8dbc;
+    border-bottom: 2px solid #3c8dbc;
+}
+
+build/css/app.css 13995

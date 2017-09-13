@@ -37,17 +37,17 @@ class ProvedorController extends Controller
 
     public function update(Request $request,$id)
     {
-        $provedor=provedor::find($id);
-        $provedor->nProvRuc=$request->ruc;
-        $provedor->cProvNom=$request->nombre;
-        $provedor->cProvDir=$request->dir;
-        $provedor->cProvTel=$request->tel;
-        $provedor->cProvCel=$request->cel;            
-        $provedor->cProvEma=$request->email;
-        $provedor->cProvObs=$request->obs;
-        
-        $provedor->save();
-
+        provedor::where('nProvCod',"=",$id)
+        ->update([
+            'nProvRuc' => $request->ruc,
+            'cProvNom' => $request->nombre,
+            'cProvDir' => $request->dir,
+            'cProvTel' => $request->tel,
+            'cProvCel' => $request->cel,
+            'cProvEma' => $request->email,
+            'cProvObs' => $request->obs
+            ]); 
+   
         return redirect()->route('provedor.show',$id)->with('info','El proveedor fue actualizado.');  
     }
 

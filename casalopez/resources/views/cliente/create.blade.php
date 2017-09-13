@@ -4,7 +4,6 @@
 @section('content')
 
 <div class="row col-md-8 col-md-offset-2 registeration">
-<<<<<<< HEAD
     
 <div class="registerInner">
         <div class="col-md-12 signUp">
@@ -42,33 +41,6 @@
              
 </div>
         
-=======
-    <div class="registerInner">
-            <div class="col-md-8">
-                <h3 class="headerSign">
-                    @yield('encabezado')
-                    <a href="{{ route('cliente.index') }}" class="btn btn-default pull-right">Listado</a>
-                </h3>
-
-                {!! Form::open(['route' => 'cliente.store']) !!}
-                    {{ csrf_field() }}
-                    
-                    @include('cliente.fragmento.form')
-                    <div class="form-group">
-                        {!! Form::submit('ENVIAR',  ['class' => 'btn btn-primary']) !!}
-                    </div>
-
-                {!! Form::close() !!}
-
-            </div>
-            <!--div class="col-sm-4">
-                @include('cliente.fragmento.aside')
-
-
-
-            </div-->             
-    </div>
->>>>>>> cc011c2615d34e8c63ba59c3204dc8c80a969094
 </div>
 
 @endsection

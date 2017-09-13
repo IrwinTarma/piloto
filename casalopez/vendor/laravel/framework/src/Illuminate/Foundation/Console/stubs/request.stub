@@ -24,16 +24,7 @@ class DummyClass extends FormRequest
     public function rules()
     {
         return [
-<<<<<<< HEAD:casalopez/vendor/laravel/framework/src/Illuminate/Foundation/Console/stubs/request.stub
             //
-=======
-            //'nClieCod'  => 'required';
-            'cClieTdoc' => 'required',
-            'cClieNdoc' => 'required',
-            'cClieDesc' => 'required',
-            'cClieDirec' => 'required',
-            //'cClieObs' => 'required'
->>>>>>> cc011c2615d34e8c63ba59c3204dc8c80a969094:casalopez/app/Http/Requests/ClienteRequest.php
         ];
     }
 }

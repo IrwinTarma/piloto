@@ -22,7 +22,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				@foreach($cliente as $tcliente)
+				@foreach($clientes as $tcliente)
 				<tr>
 					<td>{{ $tcliente->nClieCod }}</td>
 					<td>{{ $tcliente->cClieTdoc }}</td>
@@ -36,21 +36,13 @@
 					<a href="{{ route('cliente.show',$tcliente->nClieCod) }}">Ver</a>
 					</td>
 					<td>
-					<a href="{{ route('cliente.edit',$tcliente->nClieCod) }}">Editar</a>
+					<a href="{{ route('cliente.edit',$tcliente->nClieCod) }}">editar</a>
 					</td>
-					<td>Borrar</td>
+					<td>borrar</td>
 				</tr>
 				@endforeach			
 			</tbody>
 		</table>
-<<<<<<< HEAD
 
 	</div>	
-=======
-		{!! $cliente->render() !!}
-	</div>
-	<div class="col-sm-4">
-		@include('cliente.fragmento.aside')
-	</div>
->>>>>>> cc011c2615d34e8c63ba59c3204dc8c80a969094
 @endsection
