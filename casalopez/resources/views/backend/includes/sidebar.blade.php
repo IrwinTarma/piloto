@@ -81,13 +81,49 @@
                             <i class="fa fa-circle-o"></i>
                             <span>Medidas</span>
                         </a>
+                    </li>
+                    <li class="">
+                        <a href="{{ route('tipo.index') }}">
+                            <i class="fa fa-circle-o"></i>
+                            <span>Tipos</span>
+                        </a>
+                    </li>  
+                    <li class="">
+                        <a href="{{ route('tipo.index') }}">
+                            <i class="fa fa-circle-o"></i>
+                            <span>Productos</span>
+                        </a>
                     </li>  
                 </ul>
             </li>
 
-            <li class="header">Procesos</li>
 
             <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-list"></i>
+                    <span>Configuraciones</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu" style="display: none;">
+                    <li class="">
+                        <a href="{{ route('provedor.index') }}">
+                            <i class="fa fa-circle-o"></i>
+                            <span>Conf. Almacenes</span>
+                        </a>
+                    </li>                   
+                    <li class="">
+                        <a href="{{ route('almacen.index') }}">
+                            <i class="fa fa-circle-o"></i>
+                            <span>Conf. Medida - Precio</span>
+                        </a>
+                    </li>  
+                </ul>
+            </li>
+
+
+            <li class="header">Procesos</li>
+
+            <!--li class="treeview">
                 <a href="#">
                     <i class="fa fa-list"></i>
                     <span>Compras</span>
@@ -113,43 +149,10 @@
                         </a>
                     </li>
                 </ul>
-            </li>
-            <!--li>
-              <a href="#">
-                <i class="fa fa-circle-o"></i>
-                <span>Recepción de Terceros</span>
-              </a>
             </li-->
-            <li>
-
+        
+        
             <!--li class="treeview">
-              <a href="#">
-                  <i class="fa fa-list"></i>
-                  <span>Planeamiento y Produccion</span>
-                  <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu" style="display: none;">
-                <li>
-                  <a href="#">
-                    <i class="fa fa-circle-o"></i>
-                    <span>Planeamientos</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-circle-o"></i>
-                    <span>Produccion</span>
-                  </a>
-                </li>
-                <li>
-                <a href="#">
-                  <i class="fa fa-circle-o"></i>
-                  <span>Liquidacion de lotes</span>
-                </a>
-              </li>
-              </ul>
-            </li-->
-            <li class="treeview">
                 <a href="#">
                     <i class="fa fa-list"></i>
                     <span>Comercialización</span>
@@ -165,30 +168,23 @@
 
 
                 </ul>
-            </li>
+            </li-->
 
-            <!--li class="treeview">
+            <li class="treeview">
                 <a href="#">
                   <i class="fa fa-list"></i>
-                  <span>Despachos</span>
+                  <span>Almacen</span>
                   <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu" style="display: none;">
                     <li>
-                    <a href="#">
-                        <i class="fa fa-circle-o"></i>
-                        <span>Despacho a tintoreria</span>
-                      </a>
-                    </li>
-                      
-                    <li>
                       <a href="#">
                         <i class="fa fa-circle-o"></i>
-                        <span>Despacho a terceros</span>
+                        <span>Ingreso a Almacén</span>
                       </a>
                     </li>
                 </ul>
-            </li-->
+            </li>
             <li class="treeview">
               <a href="#">
                   <i class="fa fa-list"></i>
