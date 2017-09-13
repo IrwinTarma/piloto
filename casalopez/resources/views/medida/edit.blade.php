@@ -1,9 +1,8 @@
 @extends('backend.layouts.appv2')
 
-@section('subtitulo', 'Nuevo Proveedor')
+@section('subtitulo', 'Edición de Medidas')
 
 @section('content')
-
 
 <link href="{{ asset('css/form.css') }}" rel="stylesheet">
 
@@ -12,24 +11,22 @@
 		<section class="content">
 		    <div class="box box-info">
 		        <div class="box-header with-border">
-		            <h3 class="box-title">@yield('subtitulo')</h3>
+		            <h3 class="box-title">@yield('subtitulo') | {{ $med->cMedNom }}</h3>
 		            <div class="box-tools pull-right">
 		                <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
 		            </div><!-- /.box tools -->
 		        </div><!-- /.box-header -->
-		        <div class="box-body">
-		            @include('almacen.fragment.error')
-
-		            <form action="{{ route('almacen.store') }}" method="POST">
+		        <div class="box-body">		           
+		            <form action="{{ route('medida.update',$med->nMedCod) }}" method="POST">
 						{{ csrf_field() }}
-						<input type="hidden" name="_method" value="POST">
+						<input type="hidden" name="_method" value="PUT">
 		                <div class="form-group">
 			                <div class="row">
 			                	<div class="col-md-4">
-			                    	<input class="form-control" type="text" name="nombre" RUCd="nombre" placeholder="Nombre" value="" maxlength="255" onkeypress="return tabular(event,this)" autofocus="autofocus">
+			                    	<input class="form-control" type="text" name="nombre" RUCd="nombre" placeholder="Nombre" value="{{ $med->cMedNom }}" value="" maxlength="255"  onkeypress="return tabular(event,this)" autofocus="autofocus" tabindex="1">
 			                	</div>
 			                	<div class="col-md-8">
-			                    	<input class="form-control" type="text" name="ubic" id="ubic" placeholder="Dirección" value="" maxlength="255">
+			                    	<input class="form-control" type="text" name="desc" id="desc" placeholder="Descripción" value="{{ $med->cMedDesc }}" maxlength="255" tabindex="2">
 			                    </div>
 			                </div>
 			            </div>
@@ -37,12 +34,12 @@
 		                <button type="submit" class=" signbuttons btn btn-primary">Guardar</button> <a href="{{ redirect()->getUrlGenerator()->previous() }}" class=" signbuttons btn btn-primary">Cancelar</a>
 		            </form>
 
-    			</div><!-- /.box-body -->
+		        </div><!-- /.box-body -->
 		    </div><!--box box-success-->
 		</section>
 	</div>
 </div>
-
+    
 @endsection
 
 @push('scripts')

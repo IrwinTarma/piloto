@@ -1,6 +1,6 @@
 @extends('backend.layouts.appv2')
 
-@section('title', 'Listado de Proveedores')
+@section('title', 'Listado de Medidas')
 @section('content')
 
 	<div class="row">
@@ -15,62 +15,50 @@
 			        </div><!-- /.box-header -->
 			        <div class="box-body">
 			            
-			            <a href="{{ route('provedor.create') }}" class="btn btn-primary btn-xs" title="Agregar Proveedor">
+			            <a href="{{ route('medida.create') }}" class="btn btn-primary btn-xs" title="Agregar Medida">
 			            	<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 			            </a>
 						 <br>
 	                        <br>
-						@include('provedor.fragment.info')
+						@include('medida.fragment.info')
 						<table class="table table-hover table-striped">
 							<thead>
 								<tr>
-									<th width="20px">ID</th>
-									<th>RUC</th>
-									<th>PROVEEDOR</th>
-									<th>DIRECCION</th>
-									<th>CORREO</th>
-									<th>TELEFONO</th>
-									<th>CELULAR</th>
+									<th width="20px">ID</th>																
+									<th>NOMBRE</th>									
+									<th>DESCRIPCIÓN</th>									
 									<th colspan="3">ACCIONES</th>
 								</tr>
 							</thead>
 							<tbody style="text-align: center;">
-								@foreach($provedors as $prov)
+								@foreach($medidas as $med)
 								<tr>
-									<td>{{ $prov->nProvCod }}</td>
-									<td>{{ $prov->nProvRuc }}</td>
+									<td>{{ $med->nMedCod }}</td>
+									<td>{{ $med->cMedNom }}</td>									
+									<td>{{ $med->cMedDesc }}</td>
 									<td>
-									<strong>{{ $prov->cProvNom }}</strong>
-									<p style="font-size: 9px;">(Obs. {{ $prov->cProvObs }})</p>
-									</td>
-									<td>{{ $prov->cProvDir }}</td>
-									<td>{{ $prov->cProvEma }}</td>
-									<td>{{ $prov->cProvTel }}</td>
-									<td>{{ $prov->cProvCel }}</td>
-									<td>
-										<a href="{{ route('provedor.show',$prov->nProvCod) }}" class="btn btn-xs btn-info">
+										<a href="{{ route('medida.show',$med->nMedCod) }}" class="btn btn-xs btn-info">
 											<i class="fa fa-search" data-toggle="tooltip" data-placement="top" title="" data-original-title="View"></i>
 										</a> 
-										<a href="{{ route('provedor.edit',$prov->nProvCod) }}" class="btn btn-xs btn-primary">
+										<a href="{{ route('medida.edit',$med->nMedCod) }}" class="btn btn-xs btn-primary">
 											<i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i>
 										</a>
 
 										<a data-method="delete" data-trans-button-cancel="Cancel" data-trans-button-confirm="Delete" data-trans-title="Are you sure?" class="btn btn-xs btn-danger" style="cursor:pointer;" onclick="$(this).find(&quot;form&quot;).submit();">
 											<i class="fa fa-trash" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i>
 											
-											<form action="{{ route('provedor.destroy',$prov->nProvCod) }}" method="POST" name="delete_item" style="display:none">
+											<form action="{{ route('medida.destroy',$med->nMedCod) }}" method="POST" name="delete_item" style="display:none">
 											   {{ csrf_field() }}
 												<input type="hidden" name="_method" value="DELETE">
 											    <!--input type="hidden" name="_token" value="MAkHFJSuu2TYPiebIcKDFTy53mpZB3g3TGN9svAi"-->
 											</form>
-
 										</a>
 									</td>
 								</tr>
 								@endforeach
 							</tbody>
 						</table>
-						{!! $provedors->render() !!}
+						{!! $medidas->render() !!}
 						
 			        </div><!-- /.box-body -->
 			    </div><!--box box-success-->

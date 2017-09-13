@@ -75,7 +75,13 @@
                             <i class="fa fa-circle-o"></i>
                             <span>Almacenes</span>
                         </a>
-                    </li>                   
+                    </li>  
+                    <li class="">
+                        <a href="{{ route('medida.index') }}">
+                            <i class="fa fa-circle-o"></i>
+                            <span>Medidas</span>
+                        </a>
+                    </li>  
                 </ul>
             </li>
 

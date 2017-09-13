@@ -137,5 +137,6 @@ Route::get('comercializacion/notaingresoatipico/impresion/{id}', 'Comercializaci
 //Route::post('comercializacion/notaingreso', 'Comercializacion\\NotaIngresoController@store');
 Route::resource('provedor','ProvedorController');
 Route::resource('almacen','AlmacenController');
+Route::resource('medida','MedidaController');
 
 Route::resource('cliente','ClienteController');

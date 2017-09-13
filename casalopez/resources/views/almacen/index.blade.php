@@ -27,10 +27,10 @@
 									<th width="20px">ID</th>																
 									<th>NOMBRE</th>									
 									<th>UBICACIÓN</th>									
-									<th colspan="3">&nbsp;</th>
+									<th colspan="3">ACCIONES</th>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody style="text-align: center;">
 								@foreach($almacens as $alm)
 								<tr>
 									<td>{{ $alm->nAlmCod }}</td>

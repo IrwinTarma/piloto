@@ -1,6 +1,6 @@
 @extends('backend.layouts.appv2')
 
-@section('subtitulo', 'Nuevo Proveedor')
+@section('subtitulo', 'Nueva Medida')
 
 @section('content')
 
@@ -18,18 +18,18 @@
 		            </div><!-- /.box tools -->
 		        </div><!-- /.box-header -->
 		        <div class="box-body">
-		            @include('almacen.fragment.error')
+		            @include('medida.fragment.error')
 
-		            <form action="{{ route('almacen.store') }}" method="POST">
+		            <form action="{{ route('medida.store') }}" method="POST">
 						{{ csrf_field() }}
 						<input type="hidden" name="_method" value="POST">
 		                <div class="form-group">
 			                <div class="row">
 			                	<div class="col-md-4">
-			                    	<input class="form-control" type="text" name="nombre" RUCd="nombre" placeholder="Nombre" value="" maxlength="255" onkeypress="return tabular(event,this)" autofocus="autofocus">
+			                    	<input class="form-control" type="text" name="nombre" RUCd="nombre" placeholder="Nombre" value="" maxlength="255" onkeypress="return tabular(event,this)" autofocus="autofocus" tabindex="1">
 			                	</div>
 			                	<div class="col-md-8">
-			                    	<input class="form-control" type="text" name="ubic" id="ubic" placeholder="Dirección" value="" maxlength="255">
+			                    	<input class="form-control" type="text" name="desc" id="desc" placeholder="Descripción" value="" maxlength="255" tabindex="2">
 			                    </div>
 			                </div>
 			            </div>
