@@ -1,9 +1,5 @@
 <?php
 
-use Faker\Generator;
-use App\Models\Access\User\User;
-use App\Models\Access\Role\Role;
-
 /*
 |--------------------------------------------------------------------------
 | Model Factories
@@ -15,55 +11,25 @@ use App\Models\Access\Role\Role;
 |
 */
 
-$factory->define(User::class, function (Generator $faker) {
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
         'name' => $faker->name,
-        'email' => $faker->safeEmail,
+        'email' => $faker->unique()->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
-		'confirmation_code' => md5(uniqid(mt_rand(), true)),
     ];
 });
 
-$factory->state(User::class, 'active', function () {
-	return [
-		'status' => 1,
-	];
-});
-
-$factory->state(User::class, 'inactive', function () {
-	return [
-		'status' => 0,
-	];
-});
-
-$factory->state(User::class, 'confirmed', function () {
-	return [
-		'confirmed' => 1,
-	];
-});
-
-$factory->state(User::class, 'unconfirmed', function () {
-	return [
-		'confirmed' => 0,
-	];
-});
-
-/**
- * Roles
- */
-$factory->define(Role::class, function (Generator $faker) {
-	return [
-		'name' => $faker->name,
-		'all' => 0,
-		'sort' => $faker->numberBetween(1, 100),
-	];
-});
-
-$factory->state(Role::class, 'admin', function () {
-	return [
-		'all' => 1,
-	];
+$factory->define(App\cliente::class, function (Faker\Generator $faker) {
+    return [
+        'nClieCod' => App\cliente::inRandomOrder()->first()->id,
+        'cClieTdoc' => $faker->text(8),
+        'cClieNdoc' => $faker->text(8),
+        'cClieDesc' => $faker->text(30),
+        'cClieDirec' => $faker->text(30),
+        'cClieObs' => $faker->text(50)
+    ];
 });

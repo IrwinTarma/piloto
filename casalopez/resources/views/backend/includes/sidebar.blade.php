@@ -65,65 +65,109 @@
                 </a>
                 <ul class="treeview-menu" style="display: none;">
                     <li class="">
-                        <a href="{{ route('provedor.index') }}">
+                        <a href="{{ route('empleados.index') }}">
                             <i class="fa fa-circle-o"></i>
-                            <span>Proveedores</span>
-                        </a>
-                    </li>                   
-                    <li class="">
-                        <a href="{{ route('almacen.index') }}">
-                            <i class="fa fa-circle-o"></i>
-                            <span>Almacenes</span>
-                        </a>
-                    </li>  
-                    <li class="">
-                        <a href="{{ route('medida.index') }}">
-                            <i class="fa fa-circle-o"></i>
-                            <span>Medidas</span>
+                            <span>Empleados</span>
                         </a>
                     </li>
                     <li class="">
-                        <a href="{{ route('tipo.index') }}">
+                        <a href="{{ route('tipo_proveedor.index') }}">
                             <i class="fa fa-circle-o"></i>
-                            <span>Tipos</span>
+                            <span>Tipo de Proveedores</span>
                         </a>
-                    </li>  
+                    </li>
                     <li class="">
-                        <a href="{{ route('tipo.index') }}">
+                        <a href="{{ route('procedencias.index') }}">
                             <i class="fa fa-circle-o"></i>
-                            <span>Productos</span>
+                            <span>Procedencias</span>
                         </a>
-                    </li>  
+                    </li>
+                    <li class="">
+                        <a href="{{ route('proveedores.index') }}">
+                            <i class="fa fa-circle-o"></i>
+                            <span>Proveedores</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="{{ route('color.index') }}">
+                            <i class="fa fa-circle-o"></i>
+                            <span>Colores</span>
+                        </a>
+                    </li>
+                    <li>
+                    <li class="">
+                        <a href="{{ route('proveedor_color_producto.index') }}">
+                            <i class="fa fa-circle-o"></i>
+                            <span>Proveedor Color Producto</span>
+                        </a>
+                    </li>
+                    <li>
+                      <a href="{{ route('titulos.index')}}">
+                        <i class="fa fa-circle-o"></i>
+                        <span>Titulos</span>
+                      </a>
+                    </li>
+                    <li class="">
+                        <a href="{{ route('insumos.index') }}">
+                            <i class="fa fa-circle-o"></i>
+                            <span>Insumos</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="{{ route('accesorios.index') }}">
+                            <i class="fa fa-circle-o"></i>
+                            <span>Accesorios</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="{{ route('productos.index') }}">
+                            <i class="fa fa-circle-o"></i>
+                            <span>Telas</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="{{ route('locales.index') }}">
+                            <i class="fa fa-circle-o"></i>
+                            <span>Locales</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="{{ route('maquinas.index') }}">
+                            <i class="fa fa-circle-o"></i>
+                            <span>Maquinas</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="{{ route('bancos.index') }}">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span>Bancos</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="{{ route('tipos-pago.index') }}">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span>Tipos de Pago</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="{{ route('tipos-abono.index') }}">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span>Tipos de Abono</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="{{ route('compra-estados.index') }}">
+                            <i class="fa fa-circle-o"></i>
+                            <span>Estados de Compra</span>
+                        </a>
+                    </li>
+
                 </ul>
             </li>
-
-
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-list"></i>
-                    <span>Configuraciones</span>
-                    <i class="fa fa-angle-left pull-right"></i>
-                </a>
-                <ul class="treeview-menu" style="display: none;">
-                    <li class="">
-                        <a href="{{ route('provedor.index') }}">
-                            <i class="fa fa-circle-o"></i>
-                            <span>Conf. Almacenes</span>
-                        </a>
-                    </li>                   
-                    <li class="">
-                        <a href="{{ route('almacen.index') }}">
-                            <i class="fa fa-circle-o"></i>
-                            <span>Conf. Medida - Precio</span>
-                        </a>
-                    </li>  
-                </ul>
-            </li>
-
 
             <li class="header">Procesos</li>
 
-            <!--li class="treeview">
+            <li class="treeview">
                 <a href="#">
                     <i class="fa fa-list"></i>
                     <span>Compras</span>
@@ -131,28 +175,61 @@
                 </a>
                 <ul class="treeview-menu" style="display: none;">
                     <li class="">
-                        <a href="#">
+                        <a href="{{ route('compras.index') }}">
                             <i class="fa fa-shopping-cart"></i>
                             <span>Compras</span>
                         </a>
                     </li>
                     <li class="">
-                        <a href="#">
+                        <a href="{{ route('devoluciones.index') }}">
                             <i class="fa fa-shopping-cart"></i>
                             <span>Devoluciones</span>
                         </a>
                     </li>
                     <li class="">
-                        <a href="#">
+                        <a href="{{ route('abonos.index') }}">
                             <i class="fa fa-shopping-cart"></i>
                             <span>Abonos</span>
                         </a>
                     </li>
                 </ul>
-            </li-->
-        
-        
-            <!--li class="treeview">
+            </li>
+            <li>
+              <a href="{{route('recepcion-mp.index')}}">
+                <i class="fa fa-circle-o"></i>
+                <span>Recepción de Terceros</span>
+              </a>
+            </li>
+            <li>
+
+            <li class="treeview">
+              <a href="#">
+                  <i class="fa fa-list"></i>
+                  <span>Planeamiento y Produccion</span>
+                  <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu" style="display: none;">
+                <li>
+                  <a href="{{route('planeamientos.index')}}">
+                    <i class="fa fa-circle-o"></i>
+                    <span>Planeamientos</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="{{route('bandeja-produccion.index')}}">
+                    <i class="fa fa-circle-o"></i>
+                    <span>Produccion</span>
+                  </a>
+                </li>
+                <li>
+                <a href="{{route('compras.liquidacion')}}">
+                  <i class="fa fa-circle-o"></i>
+                  <span>Liquidacion de lotes</span>
+                </a>
+              </li>
+              </ul>
+            </li>
+            <li class="treeview">
                 <a href="#">
                     <i class="fa fa-list"></i>
                     <span>Comercialización</span>
@@ -160,7 +237,7 @@
                 </a>
                 <ul class="treeview-menu" style="display: none;">
                     <li>
-                        <a href="#">
+                        <a href="{{route('comercializacion.index')}}">
                             <i class="fa fa-circle-o"></i>
                             <span>Bandeja de Recepcion</span>
                         </a>
@@ -168,19 +245,26 @@
 
 
                 </ul>
-            </li-->
+            </li>
 
             <li class="treeview">
                 <a href="#">
                   <i class="fa fa-list"></i>
-                  <span>Almacen</span>
+                  <span>Despachos</span>
                   <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu" style="display: none;">
                     <li>
-                      <a href="#">
+                    <a href="{{route('despacho-tintoreria.index')}}">
                         <i class="fa fa-circle-o"></i>
-                        <span>Ingreso a Almacén</span>
+                        <span>Despacho a tintoreria</span>
+                      </a>
+                    </li>
+                      
+                    <li>
+                      <a href="{{route('despacho-terceros.index')}}">
+                        <i class="fa fa-circle-o"></i>
+                        <span>Despacho a terceros</span>
                       </a>
                     </li>
                 </ul>

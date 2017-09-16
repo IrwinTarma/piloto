@@ -1,11 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Database\Eloquent\Model;
 
-/**
- * Class DatabaseSeeder
- */
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -15,12 +11,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Model::unguard();
-
-        $this->call(AccessTableSeeder::class);
-        $this->call(HistoryTypeTableSeeder::class);
-        $this->call(ProjectTableSeeder::class);
-
-        Model::reguard();
+        $this->call(ClientesTableSeeder::class);
     }
 }
