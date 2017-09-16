@@ -26,4 +26,9 @@ class subtipo extends Model
     	'nTipoCod',
     	'cSTipDes'
     ];
+
+    public function tipo()
+    {
+        return $this->belongsTo('App\tipo', 'nTipoCod');//de muchos a uno
+    }
 }

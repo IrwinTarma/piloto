@@ -37,30 +37,30 @@ class ProvedorController extends Controller
 
     public function update(Request $request,$id)
     {
-        $provedor=provedor::find($id);
-        $provedor->nProvRuc=$request->ruc;
-        $provedor->cProvNom=$request->nombre;
-        $provedor->cProvDir=$request->dir;
-        $provedor->cProvTel=$request->tel;
-        $provedor->cProvCel=$request->cel;            
-        $provedor->cProvEma=$request->email;
-        $provedor->cProvObs=$request->obs;
-        
-        $provedor->save();
-
+        provedor::where('nProvCod',"=",$id)
+        ->update([
+            'nProvRuc' => $request->ruc,
+            'cProvNom' => $request->nombre,
+            'cProvDir' => $request->dir,
+            'cProvTel' => $request->tel,
+            'cProvCel' => $request->cel,
+            'cProvEma' => $request->email,
+            'cProvObs' => $request->obs
+            ]); 
+   
         return redirect()->route('provedor.show',$id)->with('info','El proveedor fue actualizado.');  
     }
 
     public function show($id)
     {
-    	$provedor=provedor::where('nProvCod','=',$id)->get();
-    	return view("provedor.show",compact("provedor"));
+    	$prove=provedor::where('nProvCod','=',$id)->get()->first();
+    	return view("provedor.show",compact("prove"));
     }
 
     public function edit($id)
     {
-    	$provedor=provedor::where('nProvCod','=',$id)->get();
-    	return view("provedor.edit",compact("provedor"));
+    	$prove=provedor::where('nProvCod','=',$id)->get()->first();
+    	return view("provedor.edit",compact("prove"));
     }
 
     public function destroy($id)

@@ -16,8 +16,9 @@ class CreateTipoTable extends Migration
          Schema::create('Tipos', function (Blueprint $table) {
             $table->increments('nTipoCod')->unsigned();
             $table->string('cTipoDesc');
-            $table->dateTime('tTipoFCre');
-            $table->dateTime('tTipoFMod');
+            //$table->timestamps();
+            //$table->dateTime('tTipoFCre');
+            //$table->dateTime('tTipoFMod');
                        
         });
     }

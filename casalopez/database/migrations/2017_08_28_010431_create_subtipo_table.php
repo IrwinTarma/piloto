@@ -17,8 +17,8 @@ class CreateSubtipoTable extends Migration
             $table->increments('nSTipCod')->unsigned();
             $table->integer('nTipoCod')->unsigned();
             $table->string('cSTipDes');
-            $table->integer('tSTipFcre');
-            $table->integer('tSTipFmod');
+            /*$table->integer('tSTipFcre');
+            $table->integer('tSTipFmod');*/
             
             $table->foreign('nTipoCod')->references('nTipoCod')->on('Tipos');
             

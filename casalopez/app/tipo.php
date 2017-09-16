@@ -25,4 +25,9 @@ class tipo extends Model
     protected $fillable = [
     	'cTipoDesc'
     ];
+
+    public function subtipo()
+    {
+        return $this->hasMany('App\subtipo','nTdocCod');
+    }
 }

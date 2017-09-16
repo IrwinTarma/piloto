@@ -113,7 +113,21 @@ return [
     */
 
     'attributes' => [
-
+                    //Proveedores
+            'nProvRuc' => 'RUC',
+            'cProvNom' => 'Nombre',
+            'cProvDir' => 'Dirección',
+            //'cProvTel',
+            'cProvCel' => 'Celular',
+            'cProvEma' => 'Email',
+            //'cProvObs'
+            
+            //Cliente
+            'cClieTdoc' => 'Tipo Doc.',
+            'cClieNdoc' => 'N° de Doc',
+            'cClieDesc' => 'Descripción',
+            'cClieDirec' => 'Dirección',
+            
         'backend' => [
             'access' => [
                 'permissions' => [

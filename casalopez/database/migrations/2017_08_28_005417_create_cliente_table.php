@@ -15,13 +15,15 @@ class CreateClienteTable extends Migration
     {
          Schema::create('Clientes', function (Blueprint $table) {
             $table->increments('nClieCod')->unsigned();
-            $table->string('cClieTdoc');
-            $table->string('cClieNdoc');
+            $table->integer('nTdocCod')->unsigned();
+            $table->string('cClieNdoc',11);
             $table->string('cClieDesc');
             $table->string('cClieDirec');
-            $table->string('cClieObs');
-                               
-            
+            $table->string('cClieObs')->nullable();
+            //$table->primary('nClieCod');
+            $table->foreign('nTdocCod')->references('nTdocCod')->on('tipodocs');
+            $table->timestamps();
+
         });
     }
 
